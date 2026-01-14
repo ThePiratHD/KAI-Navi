@@ -43,10 +43,9 @@ func _build_map():
 	var TreppeW2 = "Treppe Südflügel hinten"
 
 	# Flure ↔ Räume
-	graph.add_edge(S0, "Otium", 8)
 	graph.add_edge(TreppeS1, "West_2_Raum_201", 2)
 	graph.add_edge(TreppeS1, "West_2_Raum_202", 2)
-	graph.add_edge("A0", "A", 5)
+	
 	#Altbau 
 	graph.add_edge("A0", "A03", 5)	
 	graph.add_edge("A0", "A0B", 5) #Was ist das
@@ -56,6 +55,7 @@ func _build_map():
 	graph.add_edge("A0", "SV-Raum", 5)
 	graph.add_edge("A0", "A02", 5)
 	graph.add_edge("A0", "A0LA", 5)
+	graph.add_edge("A1", "AULA", 5)
 	graph.add_edge("A0", "Lehrerzimmer", 5)
 	graph.add_edge("A0", "A01", 5)
 	graph.add_edge("A1", "Aula", 5) # Ich weiß nicht ob das stimmt
@@ -77,25 +77,72 @@ func _build_map():
 	graph.add_edge("A3", "A33", 5)
 	graph.add_edge("A3", "A32", 5)
 	graph.add_edge("A3", "A31", 5)
+	
 	#Westflügel
 	graph.add_edge(W0, "Klo", 5)
-	graph.add_edge(W0, "Toilette ", 5)
-	graph.add_edge(W0, "WC ", 5)
+	graph.add_edge(W0, "Toilette", 5)
 	graph.add_edge(W0, "WC", 5)
-	graph.add_edge(W0, "WC Damen", 5)
-	graph.add_edge(W0, "WC Herren", 5)
+	graph.add_edge(W0, "Behinderten WC", 5)
+	graph.add_edge(W0, "W01MU", 5)
+	graph.add_edge(W0, "Musik Sammlung", 5)
+	graph.add_edge(W0, "W02MU", 5)
+	graph.add_edge("W1", "W1G", 5)
+	graph.add_edge("W1", "W16", 5)
+	graph.add_edge("W1", "W15", 5)
+	graph.add_edge("W1", "W14", 5)
+	graph.add_edge("W1", "W13", 5)
+	graph.add_edge("W1", "W12", 5)
+	graph.add_edge("W1", "W11", 5)
+	graph.add_edge("W1", "Lehrer WC", 5)
+	graph.add_edge("W2", "W21", 5)
+	graph.add_edge("W2", "W2G", 5)
+	graph.add_edge("W2", "W26", 5)
+	graph.add_edge("W2", "W25", 5)
+	graph.add_edge("W2", "W24", 5)
+	graph.add_edge("W2", "W23", 5)
+	graph.add_edge("W2", "W22", 5)
+	graph.add_edge("W2", "W2L", 5)
+	graph.add_edge("W3", "W36", 5)
+	graph.add_edge("W3", "W35", 5)
+	graph.add_edge("W3", "W34", 5)
+	graph.add_edge("W3", "W33", 5)
+	graph.add_edge("W3", "W32", 5)
+	graph.add_edge("W3", "W31", 5)
+	graph.add_edge("W3", "W3G", 5)
+	graph.add_edge("W3", "W3L", 5)
+	graph.add_edge("W4", "Lager", 5)
+	
+	
+	#Südflügel
+	graph.add_edge(S0, "Hausmeister", 5)
+	graph.add_edge(S0, "WC", 5)
+	graph.add_edge(S0, "Otium", 8)
+	graph.add_edge(S0, "Behinderten WC", 8)
+	graph.add_edge("S1", "Sekreteriat", 5)
+	graph.add_edge("S1", "Schulleitung", 5)
+	graph.add_edge("S1", "S1V", 5)
+	graph.add_edge("S1", "S11PH", 5)
+	graph.add_edge("S1", "S1PHS", 5)
+	graph.add_edge("S1", "S12PH", 5)
+	graph.add_edge("S1", "S1B", 5)
+	graph.add_edge("S1", "S1VA", 5)
+	graph.add_edge("S2", "S24", 5)
+	graph.add_edge("S2", "S25", 5)
+	graph.add_edge("S2", "S26", 5)
+	graph.add_edge("S2", "S23BI", 5)
+	graph.add_edge("S2", "S22BI", 5)
+	graph.add_edge("S2", "S21BI", 5)
+	graph.add_edge("S2", "S2BIS", 5)
+	graph.add_edge("S3", "S31CH", 5)
+	graph.add_edge("S3", "S3CHS", 5)
+	graph.add_edge("S3", "S35", 5)
+	graph.add_edge("S3", "S34IF", 5)
+	graph.add_edge("S3", "S33IF", 5)
+	graph.add_edge("S3", "S32Ch", 5)
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-
 	#  Treppen ↔ Innenhof
 	graph.add_edge(TreppeS1, "Innenhof", 15)
 	graph.add_edge(TreppeS2, "Innenhof", 15)
@@ -118,6 +165,11 @@ func _build_map():
 	graph.add_edge(TreppeA1, "A2", 4)
 	graph.add_edge(TreppeA1, "A3", 4)
 	graph.add_edge(TreppeA1, "A4", 4)
+	graph.add_edge(TreppeA1, "W0", 4)
+	graph.add_edge(TreppeA1, "W1", 4)
+	graph.add_edge(TreppeA1, "W2", 4)
+	graph.add_edge(TreppeA1, "W3", 4)
+	graph.add_edge(TreppeA1, "W4", 4)
 	graph.add_edge(TreppeA2, "A0", 4)
 	graph.add_edge(TreppeA2, "A1", 4)
 	graph.add_edge(TreppeA2, "A2", 4)
