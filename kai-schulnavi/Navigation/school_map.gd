@@ -14,11 +14,11 @@ func _build_map():
 	var _rooms = [
 		"A03", "A0B", "A0BIB", "Bibliothek", "A0SII", "SV-Raum", "A02", "A0LA", "AULA", "Lehrerzimmer", "A01", "Aula", "A11", "A16MU", "Technik", "A15", 
 		"A14", "A13", "ML", "A26", "A25", "A24", "A23", "A22", "A21", "Kunstsammlung", "Atelier", "A33", "A32", "A31", 
-		"Klo", "Toilette", "WC", "Behinderten WC", "W01MU", "Musik Sammlung", "W02MU",
+		"Klo", "Toilette", "WC Westflügel", "Behinderten WC", "W01MU", "Musik Sammlung", "W02MU",
 		"W1G", "W16", "W15", "W14", "W13", "W12", "W11", "Lehrer WC",
 		"W21", "W2G", "W26", "W25", "W24", "W23", "W22", "W2L",
 		"W36", "W35", "W34", "W33", "W32", "W31", "W3G", "W3L",
-		"Lager", "Hausmeister", "WC", "Otium", "Behinderten WC",
+		"Lager", "Hausmeister", "WC Südflügel", "Otium", "Behinderten WC",
 		"Sekreteriat", "Schulleitung", "S1V", "S11PH", "S1PHS", "S12PH", "S1B", "S1VA",
 		"S24", "S25", "S26", "S23BI", "S22BI", "S21BI", "S2BIS",
 		"S31CH", "S3CHS", "S35", "S34IF", "S33IF", "S32Ch", WC
@@ -51,18 +51,18 @@ func _build_map():
 
 	if barrierefrei:
 		lifts = ["Westflügel Fahrstuhl", "Südflügel Fahrstuhl", "Altbau Fahrstuhl"]
-		graph.add_edge("Westflügel Fahrstuhl", W0, 4)
-		graph.add_edge("Westflügel Fahrstuhl", "W1", 4)
-		graph.add_edge("Westflügel Fahrstuhl", "W2", 4)
-		graph.add_edge("Westflügel Fahrstuhl", "W3", 4)
-		graph.add_edge("Südflügel Fahrstuhl", S0, 4)
-		graph.add_edge("Südflügel Fahrstuhl", "S1", 4)
-		graph.add_edge("Südflügel Fahrstuhl", "S2", 4)
-		graph.add_edge("Südflügel Fahrstuhl", "S3", 4)
-		graph.add_edge("Altbau Fahrstuhl", "A0", 4)
-		graph.add_edge("Altbau Fahrstuhl", "A1", 4)
-		graph.add_edge("Altbau Fahrstuhl", "A2", 4)
-		graph.add_edge("Altbau Fahrstuhl", "A3", 4)
+		graph.add_edge("Westflügel Fahrstuhl", W0, 1)
+		graph.add_edge("Westflügel Fahrstuhl", "W1", 1)
+		graph.add_edge("Westflügel Fahrstuhl", "W2", 1)
+		graph.add_edge("Westflügel Fahrstuhl", "W3", 1)
+		graph.add_edge("Südflügel Fahrstuhl", S0, 1)
+		graph.add_edge("Südflügel Fahrstuhl", "S1", 1)
+		graph.add_edge("Südflügel Fahrstuhl", "S2", 1)
+		graph.add_edge("Südflügel Fahrstuhl", "S3", 1)
+		graph.add_edge("Altbau Fahrstuhl", "A0", 1)
+		graph.add_edge("Altbau Fahrstuhl", "A1", 1)
+		graph.add_edge("Altbau Fahrstuhl", "A2", 1)
+		graph.add_edge("Altbau Fahrstuhl", "A3", 1)
 		
 		
 	#Altbau 
@@ -100,7 +100,7 @@ func _build_map():
 	#Westflügel
 	graph.add_edge(W0, "Klo", 5)
 	graph.add_edge(W0, "Toilette", 5)
-	graph.add_edge(W0, "WC", 5)
+	graph.add_edge(W0, "WC Westflügel", 5)
 	graph.add_edge(W0, "Behinderten WC", 5)
 	graph.add_edge(W0, "W01MU", 5)
 	graph.add_edge(W0, "Musik Sammlung", 5)
@@ -134,7 +134,7 @@ func _build_map():
 	
 	#Südflügel
 	graph.add_edge(S0, "Hausmeister", 5)
-	graph.add_edge(S0, "WC", 5)
+	graph.add_edge(S0, "WC Südflügel", 5)
 	graph.add_edge(S0, "Otium", 8)
 	graph.add_edge(S0, "Behinderten WC", 8)
 	graph.add_edge("S1", "Sekreteriat", 5)
