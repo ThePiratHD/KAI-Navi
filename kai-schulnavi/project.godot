@@ -23,6 +23,7 @@ buses/default_bus_layout="res://Assets/default_bus_layout.tres"
 
 window/size/viewport_width=293
 window/size/viewport_height=633
+window/size/resizable=false
 
 [rendering]
 
