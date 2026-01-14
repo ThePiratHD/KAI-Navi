@@ -1,4 +1,4 @@
-class_name School_map
+
 extends RefCounted
 
 var graph := Graph.new()
