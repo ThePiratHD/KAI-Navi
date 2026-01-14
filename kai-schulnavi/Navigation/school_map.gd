@@ -11,9 +11,16 @@ func _init(_barrierefrei: bool = false):
 func _build_map():
 	# Beispiel-Knoten (Flure, Räume, Treppen, Fahrstuhl, Innenhof)
 	var rooms = [
-		"W101", "West_1_Raum_102",
-		"West_2_Raum_201", "West_2_Raum_202",
-		"Alt_3_Raum_301"
+		"A03", "A0B", "A0BIB", "Bibliothek", "A0SII", "SV-Raum", "A02", "A0LA", "AULA", "Lehrerzimmer", "A01", "Aula", "A11", "A16MU", "Technik", "A15", 
+		"A14", "A13", "ML", "A26", "A25", "A24", "A23", "A22", "A21", "Kunstsammlung", "Atelier", "A33", "A32", "A31", 
+		"Klo", "Toilette", "WC", "Behinderten WC", "W01MU", "Musik Sammlung", "W02MU",
+		"W1G", "W16", "W15", "W14", "W13", "W12", "W11", "Lehrer WC",
+		"W21", "W2G", "W26", "W25", "W24", "W23", "W22", "W2L",
+		"W36", "W35", "W34", "W33", "W32", "W31", "W3G", "W3L",
+		"Lager", "Hausmeister", "WC", "Otium", "Behinderten WC",
+		"Sekreteriat", "Schulleitung", "S1V", "S11PH", "S1PHS", "S12PH", "S1B", "S1VA",
+		"S24", "S25", "S26", "S23BI", "S22BI", "S21BI", "S2BIS",
+		"S31CH", "S3CHS", "S35", "S34IF", "S33IF", "S32Ch"
 	]
 
 	var _flure = [
