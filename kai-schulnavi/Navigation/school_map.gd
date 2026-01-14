@@ -207,10 +207,8 @@ func _build_map():
 	
 
 	# Flure ↔ Fahrstühle (optional)
-	for lift in lifts:
-		var floor = lift.split("_")[0] + "_" + lift.split("_")[1]
-		graph.add_edge("%s_Flur" % floor, lift, 3)
 
+		
 	# Innenhof verbindungen 
 	graph.add_edge(W0, courtyard, 10)
 	graph.add_edge(courtyard, "A0", 10)
