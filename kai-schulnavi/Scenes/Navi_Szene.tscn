@@ -4,3 +4,27 @@
 
 [node name="NaviSzene" type="Node2D"]
 script = ExtResource("1_hwu3u")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 37.000004
+offset_top = 31.000004
+offset_right = 237.0
+offset_bottom = 71.0
+scale = Vector2(1.0315089, 0.9590289)
+
+[node name="OptionButton" type="OptionButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "A1"
+popup/item_0/id = 0
+popup/item_1/text = "A2"
+popup/item_1/id = 1
+popup/item_2/text = "A3"
+popup/item_2/id = 2
