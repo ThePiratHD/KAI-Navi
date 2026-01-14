@@ -10,7 +10,7 @@ func _init(_barrierefrei: bool = false):
 
 func _build_map():
 	# Beispiel-Knoten (Flure, Räume, Treppen, Fahrstuhl, Innenhof)
-	var _rooms = [
+	var rooms = [
 		"W101", "West_1_Raum_102",
 		"West_2_Raum_201", "West_2_Raum_202",
 		"Alt_3_Raum_301"
