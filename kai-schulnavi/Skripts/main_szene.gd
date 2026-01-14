@@ -27,8 +27,7 @@ func _ready():
 
 
 func _fill_option_button(button: OptionButton, items: Array[String]) -> void:
-	
-	
+
 	for item in items:
 		button.add_item(item)
 	button.select(0)
