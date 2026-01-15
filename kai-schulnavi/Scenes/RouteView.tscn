@@ -13,24 +13,27 @@ script = ExtResource("1_nmv2n")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 411.0
-offset_right = 266.0
-offset_bottom = 543.0
+offset_left = 23.0
+offset_top = 294.0
+offset_right = 263.0
+offset_bottom = 562.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 77.0
-offset_right = 211.0
-offset_bottom = 254.0
+offset_left = 35.0
+offset_top = 15.0
+offset_right = 215.0
+offset_bottom = 263.0
 alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="RouteList" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Close_Button" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
