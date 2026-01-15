@@ -12,8 +12,8 @@ func _ready():
 	school_map = SchoolMapClass.new(barrierefrei)
 
 	# Beispiel-Navigation
-	var start = "Mensa"
-	var target = "A33"
+	var start = ""
+	var target = ""
 	print("Neue Route")
 
 

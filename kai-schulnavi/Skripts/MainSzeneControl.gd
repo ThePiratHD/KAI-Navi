@@ -2,6 +2,7 @@ extends Control
 
 # preload the navigation logic
 var SchoolMapClass = preload("res://navigation/school_map.gd")
+var RouteViewScene = preload("res://Scenes/RouteView.tscn")
 
 # class-level variables
 var school_map
@@ -78,6 +79,10 @@ func _on_route_pressed() -> void:
 
 	var path = school_map.find_path(start_room, target_room)
 
-	print("Route von ", start_room, " nach ", target_room)
-	for step in path:
-		print(" → ", step)
+	if path.is_empty():
+		push_warning("Keine Route gefunden")
+		return
+
+	var route_view = RouteViewScene.instantiate()
+	add_child(route_view)
+	route_view.set_route(path, start_room, target_room)

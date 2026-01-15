@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://c30cmv85pxy5b"]
+
+[ext_resource type="Script" uid="uid://juje2ula5wqw" path="res://Skripts/RouteViewControl.gd" id="1_nmv2n"]
+
+[node name="RouteView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nmv2n")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 411.0
+offset_right = 266.0
+offset_bottom = 543.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 77.0
+offset_right = 211.0
+offset_bottom = 254.0
+alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="RouteList" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Close_Button" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Schließen"
+
+[node name="TitelLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -41.0
+offset_right = 211.0
+offset_bottom = -18.0
+text = "Route:"
